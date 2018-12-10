@@ -11,6 +11,9 @@ function selscore($k)
     global $dsn,$user,$pass,$key;
     try {
         $dbh = new PDO($dsn, $user, $pass);
+        //$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $set=$dbh->prepare("SET NAMES utf8");
+        $set->execute();
         $sel=$dbh->prepare('SELECT student_id FROM student WHERE student_key=?');
         $sel->execute(array($key));
         $h=json_encode($sel->fetchall(PDO::FETCH_ASSOC));

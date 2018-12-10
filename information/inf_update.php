@@ -14,7 +14,7 @@ function student_update($d)
     global $dsn,$user,$pass;
     try {
         $data = [
-            $d['student_id'],
+            $d['_student_id'],
             $d['student_name'],
             $d['student_sex'],
             $d['student_department'],
@@ -56,6 +56,7 @@ function teacher_update($d)
         $set->execute();
         $upd = $dbh->prepare("UPDATE teacher SET teacher_id=?,teacher_name=?,teacher_department=?,teacher_major=? where teacher_id=?");
         $sbool=$upd->execute($data);
+        //echo $upd;
         if($sbool)
             echo 'tea_done';
         else

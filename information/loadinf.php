@@ -17,6 +17,8 @@ function selstudent($raw)
     global $dsn,$user,$pass;
     try {
         $dbh = new PDO($dsn, $user, $pass);
+        $set=$dbh->prepare("SET NAMES utf8");
+        $set->execute();
         $data = json_decode($raw, true);
         $date = [
             $data['id']
@@ -34,6 +36,8 @@ function selteacher($raw)
     global $dsn,$user,$pass;
     try{
         $dbh=new PDO($dsn, $user, $pass);
+        $set=$dbh->prepare("SET NAMES utf8");
+        $set->execute();
         $data = json_decode($raw, true);
         $date = [
             $data['id']
