@@ -1,0 +1,17 @@
+课程：
+course_add.php  教师添加课程
+course_select.php 学生选课
+course_table.php 课程表
+getDepMajor.php 获取所有学院专业信息
+人员管理：
+inf_update.php 人员上传
+loadinf.php 前端拉取待修改人员的信息
+student_insert.php 单个插入学生信息
+teacher_insert.php 单个插入教师信息
+UploadInfFile_stu.php 批量上传学生信息
+UploadInfFile_tea.php 批量上传教师信息
+登录管理：
+select.php 管理登录页面
+成绩管理：
+score_query.php 前端返回key值，查询该学生成绩信息
+UploadScoreFile.php 教师批量上传学生成绩
